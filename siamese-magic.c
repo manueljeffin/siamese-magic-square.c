@@ -29,10 +29,11 @@ int main(void) {
 	currentrow=0;
 	currentcolumn=value;
 	for(k=2;k<=count;k++)
-	{
+	{	
+		//first set nextrow and next column using current row and current column
 		if(currentrow==0)
 		{
-			nextrow=order-1;
+			nextrow=order-1; 
 		}
 		else
 		{
@@ -46,11 +47,11 @@ int main(void) {
 		{
 			nextcolumn=currentcolumn+1;
 		}
-		if(a[nextrow][nextcolumn]==0)
+		if(a[nextrow][nextcolumn]==0) //if empty
 		{
 			a[nextrow][nextcolumn]=k;
 		}
-		else
+		else //if not empty, just put the k below the currentrow , same column
 		{
 			nextrow=currentrow+1;
 			nextcolumn=currentcolumn;
